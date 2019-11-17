@@ -7,11 +7,17 @@
 
     <div id="navigation">
         <!-- Next prev page -->
-    {{with .Site.Pages.ByWeight.Next .}}
-        <a class="nav nav-prev" href="{{.RelPermalink}}" title="{{.Title}}"> <i class="fa fa-chevron-left"></i></a>
-    {{end}}
-    {{with .Site.Pages.ByWeight.Prev .}}
-        <a class="nav nav-next" href="{{.RelPermalink}}" title="{{.Title}}" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+    {{ if .IsHome }}
+        {{range first 1 .Site.Pages }}
+            <a class="nav nav-next" href="{{.RelPermalink}}" title="{{.Title}}" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        {{end}}
+    {{ else }}
+        {{with .Site.Pages.ByWeight.Next .}}
+            <a class="nav nav-prev" href="{{.RelPermalink}}" title="{{.Title}}"> <i class="fa fa-chevron-left"></i></a>
+        {{end}}
+        {{with .Site.Pages.ByWeight.Prev .}}
+            <a class="nav nav-next" href="{{.RelPermalink}}" title="{{.Title}}" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        {{end}}
     {{end}}
     </div>
 
