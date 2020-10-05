@@ -1891,9 +1891,9 @@ hljs.registerLanguage('thingsdb', function () {
                     className: 'function',
                     begin: new RegExp(
                         '\\.\\s*(assign|len|call|choice|def|doc|emit|code|msg|each|every|extend|filter|find|' +
-                        'find_index|index_of|map|name|pop|push|remove|sort|splice|' +
-                        'add|has|contains|ends_with|lower|starts_with|test|upper|' +
-                        'del|get|id|keys|reduce|set|some|value|values|watch|wrap|unwatch|unwrap)\\s*(?=\\()'
+                        'find_index|index_of|map|name|pop|push|remove|replace|reverse|split|sort|splice|' +
+                        'add|has|contains|ends_with|lower|starts_with|test|trim|trim_left|trim_right|upper|' +
+                        'del|get|id|keys|reduce|set|shift|some|value|values|watch|wrap|unshift|unwatch|unwrap)\\s*(?=\\()'
                     ),
                 },
                 {
