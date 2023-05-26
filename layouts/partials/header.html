@@ -39,6 +39,11 @@
   <body class="" data-url="{{ .RelPermalink }}">
     {{ partial "menu.html" . }}
         <section id="body">
+        {{if .Site.Params.obsolete }}
+        <div style="position: fixed; top: 0; left: 0; width: 100%; height: 40px; text-align: center; z-index: 10000; background-color: #ffc107; font-weight: 500;">
+          <p style="margin: 0; padding: 5px;">This is the ThingsDB documentation for version v0, click <a style="" href="https://docs.thingdb.net/v1">here</a> for the latest version!</p>>
+        </div>
+        {{ end }}
         <div id="overlay"></div>
         <div class="padding highlightable">
               {{if not .IsHome}}
