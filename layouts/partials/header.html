@@ -21,7 +21,9 @@
     {{with .Site.Params.themeVariant}}
       <link href="{{(printf "css/theme-%s.css" .) | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" rel="stylesheet">
     {{end}}
-
+    {{if or (.HasShortcode "github_follow_button") (.HasShortcode "github_star_button")}}
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+    {{ end }}
     <script src="{{"js/jquery-3.3.1.min.js"| relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
 
     <style>
