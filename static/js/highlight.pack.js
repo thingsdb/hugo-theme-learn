@@ -1,5 +1,5 @@
 /*!
-  Highlight.js v11.11.1 (git: 03228bd137)
+  Highlight.js v11.11.1 (git: e10b98272d)
   (c) 2006-2026 Josh Goebel <hello@joshgoebel.com> and other contributors
   License: BSD-3-Clause
  */
@@ -3155,7 +3155,7 @@ var hljs = (function () {
       };
 
       var COMMENTS = {
-          className: 'doc',
+          className: 'comment',
           variants: [
               hljs.C_LINE_COMMENT_MODE,
               hljs.C_BLOCK_COMMENT_MODE
